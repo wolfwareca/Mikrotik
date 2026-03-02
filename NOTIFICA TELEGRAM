@@ -1,0 +1,1 @@
+/tool fetch url="https://api.telegram.org/bot**************/sendMessage?chat_id=**********&text=MikroTik+Conectado+Exitosamente" keep-result=no
