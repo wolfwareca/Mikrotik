@@ -1,0 +1,42 @@
+
+    # --- Configuracin de Tiempos (Precisin de Reloj) ---
+    :local e 160ms;  # Corchea
+    :local q 320ms;  # Negra
+    :local h 640ms;  # Blanca
+    :local w 1280ms; # Redonda (Final)
+
+    # --- Notas (Frecuencias exactas) ---
+    :local E 1318; :local D 1174; :local Fs 740; :local Gs 830; 
+    :local Cs 1108; :local B 987; :local A 880;
+
+    # --- EJECUCIN DEL TEMA COMPLETO ---
+    
+    # Primera parte
+    :beep frequency=$E length=$e; :delay $e;
+    :beep frequency=$D length=$e; :delay $e;
+    :beep frequency=$Fs length=$q; :delay $q;
+    :beep frequency=$Gs length=$q; :delay $q;
+
+    # Segunda parte
+    :beep frequency=$Cs length=$e; :delay $e;
+    :beep frequency=$B length=$e; :delay $e;
+    :beep frequency=$D length=$q; :delay $q;
+    :beep frequency=$E length=$q; :delay $q;
+
+    # Tercera parte
+    :beep frequency=$B length=$e; :delay $e;
+    :beep frequency=$A length=$e; :delay $e;
+    :beep frequency=$Cs length=$q; :delay $q;
+    :beep frequency=$E length=$q; :delay $q;
+
+    # El final clsico
+    :beep frequency=$A length=$w; :delay $w;
+
+    # --- PEQUEO SILENCIO Y REPETICIN DEL FINAL (Para que parezca llamada real) ---
+    :delay 500ms;
+
+    :beep frequency=$B length=$e; :delay $e;
+    :beep frequency=$A length=$e; :delay $e;
+    :beep frequency=$Cs length=$q; :delay $q;
+    :beep frequency=$E length=$q; :delay $q;
+    :beep frequency=$A length=$w;
