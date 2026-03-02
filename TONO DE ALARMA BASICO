@@ -1,0 +1,6 @@
+{
+:for i from=1 to=20 do={
+    /beep frequency=3200 length=500ms;
+    :delay 1000ms;
+}
+}
