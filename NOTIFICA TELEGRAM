@@ -1,1 +1,5 @@
 /tool fetch url="https://api.telegram.org/bot**************/sendMessage?chat_id=**********&text=MikroTik+Conectado+Exitosamente" keep-result=no
+
+
+
+//  /tool fetch url="https://api.telegram.org/botTU_TOKEN_AQUI/sendMessage?chat_id=TU_ID_AQUI&text=Mensaje_Sin_Espacios" keep-result=no
