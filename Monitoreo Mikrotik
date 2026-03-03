@@ -1,0 +1,85 @@
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=Mensaje_Sin_Espacios" keep-result=no
+
+
+8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU
+7799471412
+
+// Simach ✅
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%E2%9D%8C%20Sin%20Respuesta%20del%20Servidor%20%E2%9D%8C%0A%20%20%F0%9F%8C%90%20%20%20Servidor%20Simach%20%20%E2%9A%A0" keep-result=no
+
+// Tu Salud Segura ✅
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%E2%9D%8C%20Sin%20Respuesta%20del%20Servidor%20%E2%9D%8C%0A%20%20%F0%9F%8C%90%20%20%20Servidor%20Tu%20Salud%20Segura%20%20%E2%9A%A0" keep-result=no;
+
+// Tu Salud Segura SQL ✅
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%E2%9D%8C%20No%20se%20Detecta%20Conexion%20%E2%9D%8C%0A%20%20%20%20%20%20%20SQL%20Server%20Tu%20Salud%20Segura" keep-result=no
+
+// Wolfware ✅
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%E2%9D%8C%20Sin%20Respuesta%20del%20Servidor%20%E2%9D%8C%0A%20%20%F0%9F%8C%90%20%20%20Servidor%20Wolfware%20%20%E2%9A%A0" keep-result=no
+
+// LiteBeam 5AC ✅
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%F0%9F%8C%90%20%20%20%20Sin%20Respuesta%20%20%20%20%F0%9F%8C%90%0AUbiquiti%20Networks%20%0ALiteBeam%205AC%20%20%20%F0%9F%94%94" keep-result=no
+
+//  PowerBeam 5AC 300 ✅
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%F0%9F%8C%90%20%20%20Sin%20Respuesta%20%20%20%20%F0%9F%8C%90%0AUbiquiti%20Networks%20%0APowerBeam%205AC%20300%20%20%20%F0%9F%94%94" keep-result=no
+
+// Mediplus ✅
+
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%E2%9D%8C%20No%20se%20Detecta%20Conexion%20%E2%9D%8C%0A%20%20%20%20%20%20%20SQL%20Server%20Mediplus" keep-result=no
+
+// Info Mikrotik ✅
+
+{
+# 1. Capturar los datos del sistema
+:local cpuLoad [/system resource get cpu-load];
+:local freeRam ([/system resource get free-memory] / 1048576);
+:local totalRam ([/system resource get total-memory] / 1048576);
+:local temp [/system health get [find name="cpu-temperature"] value];
+:local hostname [/system identity get name];
+
+# 2. Configurar tus credenciales de Telegram
+:local botToken "8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU";
+:local chatId "7799471412";
+
+# 3. Armar el mensaje con formato (Emojis y saltos de línea %0A)
+# 🌐 Host | 🚀 CPU | 🧠 RAM | 🌡️ Temp
+:local mensaje ("%F0%9F%8C%90%20Router:%20$hostname%0A" . \
+                "%F0%9F%9A%80%20CPU%20Load:%20$cpuLoad%25%0A" . \
+                "%F0%9F%A7%A0%20RAM%20Libre:%20$freeRam%20MB%20de%20$totalRam%20MB%0A" . \
+                "%F0%9F%8C%A1%20Temp:%20$temp%C2%B0C");
+
+# 4. Enviar a Telegram
+/tool fetch url="https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=$mensaje" keep-result=no
+}
+
+
+Símbolo,Código URL,Ejemplo de uso
+
+Espacio,%20,text=Hola%20Mundo
+Salto de línea,%0A,text=Línea1%0ALínea2
+Símbolo #,%23,text=Ticket%23123
+Símbolo &,%26,text=R%26D
+Símbolo +,%2B,text=2%2B2
+Emoji ⚠️,%E2%9A%A0,text=%E2%9A%A0_Alerta
+Emoji,Significado,Código URL (UTF-8)
+✅,OK / Online,%E2%9C%85
+❌,Error / Offline,%E2%9D%8C
+⚠️,Advertencia,%E2%9A%A0
+🚀,Inicio / Speed,%F0%9F%9A%80
+🔔,Notificación,%F0%9F%94%94
+📉,Baja señal,%F0%9F%93%89
+🕒,Tiempo/Espera,%F0%9F%95%92
+🌐,Internet/Web,%F0%9F%8C%90
+
+Sin%20respuesta%20del%20servidor  (Sin Respuesta Del Servidor)
+
+
+%E2%9D%8C%20No%20se%20Detecta%20Conexion%20con%20SQL%20Server%20Mediplus%E2%9A%A0
+
+/tool fetch url="https://api.telegram.org/bot8658328052:AAF6Rg0893LlByN8iPpBTL4bVjO2J95c6WU/sendMessage?chat_id=7799471412&text=%E2%9D%8C%20No%20se%20Detecta%20Conexion%20%E2%9D%8C%0A%20%20%20%20%20%20%20SQL%20Server%20Tu%20Salud%20Segura" keep-result=no
